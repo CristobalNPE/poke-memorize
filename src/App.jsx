@@ -9,6 +9,7 @@ function App() {
     return Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
   };
 
+  // To give it more playtime, we could push 12 more pokemons to array every time score gets to 12???
   useEffect(() => {
     let numArray = [];
     for (let i = 0; i < 12; i++) {
