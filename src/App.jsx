@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Card from "./components/Card";
+import Header from "./components/Header";
 
 function App() {
   const [pokemonList, setPokemonList] = useState([]);
@@ -37,9 +38,9 @@ function App() {
 
   return (
     <main className="p-5 h-full min-h-screen  bg-gradient-to-bl from-cyan-800 to-cyan-950  flex flex-col ">
-      {/* <h1 className="text-center text-white text-xl font-semibold">Poke Memorize</h1> */}
+      <Header />
 
-      <div className="grid grid-cols-1 grid-rows-5  gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+      <div className="grid grid-cols-1 grid-rows-2  gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         {pokemonList.map((p) => (
           <Card
             key={p.id}
