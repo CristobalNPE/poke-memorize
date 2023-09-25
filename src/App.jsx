@@ -19,6 +19,9 @@ function App() {
   const [highScore, setHighScore] = useState(6);
   const [clickedPokemonIds, setClickedPokemonIds] = useState([]);
   const [gameOver, setGameOver] = useState(true);
+  
+
+  
 
   const successA = new Audio(sucessAudio);
   const lossA = new Audio(lossAudio);
