@@ -19,9 +19,6 @@ function App() {
   const [highScore, setHighScore] = useState(6);
   const [clickedPokemonIds, setClickedPokemonIds] = useState([]);
   const [gameOver, setGameOver] = useState(true);
-  
-
-  
 
   const successA = new Audio(sucessAudio);
   const lossA = new Audio(lossAudio);
@@ -55,10 +52,6 @@ function App() {
       setGameOver(true);
     }
   }
-
-  useEffect(() => {
-    console.log(pokemonList);
-  }, [pokemonList]);
 
   useEffect(() => {
     if (score >= highScore) {
@@ -137,11 +130,10 @@ function App() {
   ));
 
   return (
-    <main className="p-5 h-full min-h-screen  bg-gradient-to-bl from-cyan-800 to-cyan-950  flex flex-col ">
+    <main className=" p-1 sm:p-5  min-h-[100dvh] overflow-hidden  bg-gradient-to-bl from-cyan-800 to-cyan-950  flex flex-col  ">
       <Header score={score} highScore={highScore} />
-
-      <div className="grid grid-cols-1 grid-rows-2  gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
-        {shuffleArray(pokemonCardElements).slice(0, 12)}
+      <div className="flex gap-12 flex-wrap justify-center items-center mt-6  flex-1 ">
+        {shuffleArray(pokemonCardElements).slice(0, 6)}
       </div>
     </main>
   );
